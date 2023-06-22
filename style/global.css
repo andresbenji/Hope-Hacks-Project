@@ -79,3 +79,26 @@
 .btnn:hover {
   box-shadow: 0 12px 16px 0 black, 0 17px 50px 0 gray;
 }
+
+@media (max-width: 820px) {
+  .footer-column {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 412px) {
+  .nav-links a {
+    font-size: 1em;
+    padding: 0.5em;
+  }
+  .row {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+
+  .footer .footer-column ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}
