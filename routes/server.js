@@ -28,9 +28,7 @@ app.use((req, res, next) => {
 // path ways to connect the front end to the back end
 
 // ======================================
-// app.get("/testendpoint", (req, res) => {
-//   res.send({ data: "test response" });
-// });
+
 app.get("/randomfacts", (req, res) => {
   const url =
     "https://numbersapi.p.rapidapi.com/random/trivia?min=10&max=20&fragment=true&json=true";
