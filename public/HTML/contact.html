@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <form class="contactForm" method="post" action="http://localhost:3000/submit">
+        <table>
+            <tr>
+                <td> Name  :</td>
+                <td><input type="text" name="fullname"></td>
+            </tr>
+            <tr>
+                <td>Gender  :</td>
+                <td>
+                    <input type="radio" name="gender" value="m" required>
+                    <label> Male/Boy</label>
+                    <input type="radio" name="gender" value="f"> 
+                    <label>Female/Girl</label>
+                    <input type="radio" name="gender" value="nb"> 
+                    <label>Non-Binary</label>
+                    <input type="radio" name="gender" value="n/a">
+                    <label>Rather Not Say</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Email  :</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Phone Number  :</td>
+                <td>
+                    <select name="areaCode">
+                        <option selected hidden value="">Select Area Code</option>
+                        <option value="980">980</option>
+                        <option value="704">704</option>
+                        <option value="336">336</option>
+                    </select>
+                    <input type="tel" name="phone">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

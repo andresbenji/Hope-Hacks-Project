@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./randomFact.css">
+    <link rel="stylesheet" href="/style/global.css">
+    <script src="server.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   
+
+   <!--====================== Hero Img ===============-->
+
+   <main class="hero-img">
+    <section class="page-width">
+        <h1>Discover Random Facts</h1>
+        <div class="section-text">
+            Explore randomly generated facts for your next project or personal enjoyment
+        </div>
+    </section>
+   </main>
+   
+   <!--====================== Intro Section ===============-->
+   <section class="randomIntro">
+    <h1>Random Fact Generator</h1>
+    <br>
+    <br>
+    <p>Random Fact Galore:</p>
+    <p>Prepare to be amazed by our vast collection of random facts that cover a wide range of topics. From animals and nature to science and history, you'll find an abundance of interesting and surprising facts to satisfy your thirst for knowledge. Dive into our treasure trove of information and discover fascinating tidbits that will leave you in awe!</p>
+</section>
+<!--====================== Random Fact ===============-->
+
+<section class="fact-section">
+       <img class="mascot-img" src="img/mascot.webp" alt="">
+    <article class="fact-container">
+        <div class="display-fact"><p id="display"></p></div>
+        <button onclick="testApiCall()">Get A Fact!</button>
+    </article>
+   </section>
+   <script> async function testApiCall(){
+    const response = await fetch("http://localhost:5555/randomfacts")
+    const JSONdata = await response.json()
+    console.log(JSONdata);
+    const displayElement = document.getElementById("display");
+  displayElement.innerText = `${JSONdata.text} is ${JSONdata.number}`;
+}</script>
+
+
+   <!--====================== Flipper cards ===============-->
+   <section class="">
+    
+   </section>
+
+
+   <!--====================== Other Resources ===============-->
+   <section class="other-resources">
+    <h2>Check Out These Other Generators</h2>
+    <ul class="other-generators">
+        <li>
+           <img class="date-img" src="img/date.webp" alt="calander-img">
+           <div class="bullet">
+            <div class="spacer"></div>
+            <div class="bulletInfo">
+                <span>Date Generator:</span>
+                Generates Date Facts
+                <button class="generator-links">Take Me There</button>
+            </div>
+            <div class="spacer"></div>
+           </div> 
+        </li>
+        <li>
+            <img src="img/mathsymbols.webp" alt="mathsymbols">
+            <div class="bullet">
+            <div class="spacer"></div>
+            <div class="bulletInfo">
+                <span>Date Generator:</span>
+                Generates Date Facts
+                <button class="generator-links">Take Me There</button>
+            </div>
+            <div class="spacer"></div>
+           </div> 
+        </li>
+        <li>
+            <img src="img/trivia.webp" alt="mathsymbols">
+            <div class="bullet">
+            <div class="spacer"></div>
+            <div class="bulletInfo">
+                <span>Date Generator:</span>
+                Generates Date Facts
+                <button class="generator-links">Take Me There</button>
+            </div>
+            <div class="spacer"></div>
+           </div> 
+        </li>
+    </ul>
+    <section class="mascot-container">
+        <h2>Check Out These Other Generators</h2>
+        <img class="mascot-img" src="img/mascot.webp" alt="mascot">
+
+    </section>
+   </section>
+
+   <!-- ==================== footer ======================= -->
+
+<footer class="footer">
+    <section class="footer-container">
+        <section class="row">
+            <section class="footer-column">
+                <h4>Trivia Titans</h4>
+                <ul>
+                    <li><a href="$">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </section>
+            <section class="footer-column">
+                <h4>More Pages</h4>
+                <ul>
+                    <li><a href="$">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </section>
+            <section class="footer-column">
+                <h4>Follow US</h4>
+                <article class="social-links">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+
+                </article>
+            </section>
+            <section class="footer-column">
+                <h4>Join Our Newsletter</h4>
+                <article class="newsletter">
+                    <input type="text"-class="inputEmail" placeholder="Email?">
+                    <button class="btnn btn1"> Send </button>
+                </article>
+            </section>
+        </section>
+    </section>
+    <hr>
+</footer>
+</body>
+</html>

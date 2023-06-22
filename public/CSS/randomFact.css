@@ -8,6 +8,17 @@
 html {
   font-family: Roboto, sans-serif;
 }
+
+body {
+  background: rgb(11, 97, 149);
+  background: linear-gradient(
+    330deg,
+    rgba(11, 97, 149, 1) 12%,
+    rgba(11, 97, 149, 1) 50%,
+    rgba(48, 175, 89, 1) 100%,
+    rgba(69, 96, 203, 0.9194915254237288) 100%
+  );
+}
 /* =================== hero img =========== */
 
 .hero-img {
@@ -104,6 +115,8 @@ button {
   cursor: pointer;
   align-self: center;
 }
+
+/* =================== Flipper cards =========== */
 
 /* =================== Other Resources =========== */
 
