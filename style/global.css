@@ -1,0 +1,81 @@
+/* ================ footer=============== */
+.footer {
+  background: black;
+  padding: 70px 0;
+}
+
+.footer-container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.footer-column {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li a,
+.footer-column ul li {
+  font-size: 16px;
+  text-decoration: none;
+  color: gray;
+  display: block;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.footer-column .social-links a {
+  display: inline-block;
+  height: 1rem;
+  width: 2rem;
+  color: white;
+}
+
+.footer-column ul li a:hover {
+  color: green;
+  padding-left: 6px;
+}
+
+.footer-column input {
+  border: none;
+  width: 250px;
+  height: 45px;
+  display: block;
+  padding-left: 20px;
+  margin: 14px 0;
+}
+
+.btnn {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 1rem;
+}
+
+.btnn:hover {
+  box-shadow: 0 12px 16px 0 black, 0 17px 50px 0 gray;
+}
