@@ -11,7 +11,7 @@ html {
 /* =================== hero img =========== */
 
 .hero-img {
-  background: url(/img/hero-img3.webp) no-repeat 50%;
+  background: url(/public/img/index.jpeg) no-repeat 50%;
   background-size: cover;
   height: 470px;
   display: inline-block;
@@ -30,7 +30,7 @@ html {
 .hero-img .page-width h1 {
   font-size: 58px;
   text-align: center;
-  margin: 190px 0 0;
+  margin: 20px 0 0;
   color: black;
   font-weight: 600;
 }
@@ -39,7 +39,7 @@ html {
   width: 419px;
   font-size: 20px;
   line-height: 1.4;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 /* =================== Intro section=========== */
 
@@ -60,6 +60,10 @@ html {
   font-size: 20px;
   font-weight: 200;
   line-height: 1.25;
+}
+
+.randomIntro .mascot-img {
+  width: 20vw;
 }
 /* =================== Random Fact section =========== */
 .fact-section {
@@ -119,12 +123,16 @@ button {
   display: flex;
   margin-left: calc((100vw - 800px) / 3);
   margin-right: calc((100vw - 800px) / 3);
-  padding-bottom: 2rem;
 }
 
 .other-generators img {
   height: 9rem;
   width: 10rem;
+}
+
+.mascot-img {
+  height: 20rem;
+  width: rem;
 }
 
 .other-resources .other-generators li {
@@ -150,7 +158,7 @@ button {
   max-width: 270px;
 }
 
-.other-generators .other-resources li .bullet span {
+span {
   color: #e83f6f;
   font-weight: 700;
   font-size: 28px;
