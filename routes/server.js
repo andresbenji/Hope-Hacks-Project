@@ -60,3 +60,32 @@ app.get("/randomfacts", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Listening on local host ${PORT}`);
 });
+
+app.get("/mathFact", (req,res) => {
+  const mathURL= 
+   "https://numbersapi.p.rapidapi.com/1729/math?fragment=true&json=true";
+  const factOptions = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'fbeb36f02dmshc031c9db38cab60p1d5940jsn432ffc6c97c4',
+      'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com',
+    },
+  };
+  const randomMathFact= fetch(url, options)
+  .then((response) => response.json())
+  .then((data) => {
+    if (data) {
+      console.log(data.text);
+      console.log(data.number);
+      res.json(data);
+    } else {
+      res.status(400).send("Bad Request");
+    }
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+});
+app.listen(4000, () => {
+  console.log(`Listening on local host 4000`);
+});
