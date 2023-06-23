@@ -100,6 +100,31 @@ app.get("/year", (req, res) => {
     });
 });
 
+app.get("/triviafact/:number", (req, res) => {
+  const number = req.params.number;
+  const url = `https://numbersapi.p.rapidapi.com/${number}/trivia?fragment=true&notfound=floor&json=true`;
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "149c53b18cmsh86a3344921d867bp1c8b53jsn52fb896d19de",
+      "X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
+    },
+  };
+
+  const triviaFact = fetch(url, options)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        res.json(data);
+      } else {
+        res.status(400).send("Bad Request");
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+});
+
 app.listen(PORT, () => {
   console.log(`Listening on local host ${PORT}`);
 });
