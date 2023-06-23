@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="triviaRoutes.js"></script>
+    <title>Trivia Fact</title>
+  </head>
+  <body>
+    <div class="triva-intro">
+      <h1>Trivia Question Generator</h1>
+    </div>
+    <section class="tfact-section">
+      <article class="tfact-container">
+        <div class="tdisplay-fact"><p id="display"></p></div>
+        <button onclick="testApiCall()">Get A Trivia Fact!</button>
+      </article>
+    </section>
+    <script>
+      async function testApiCall() {
+        const response = await fetch("http://localhost:5555/trivia");
+        const JSONdata = await response.json();
+        console.log(JSONdata);
+        const displayElement = document.getElementById("display");
+        displayElement.innerText = `${JSONdata.text}`;
+      }
+    </script>
+  </body>
+</html>
