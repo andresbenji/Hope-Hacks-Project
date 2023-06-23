@@ -55,31 +55,4 @@ app.get("/randomfacts", (req, res) => {
     });
 });
 
-app.get("/triviafacts", (req, res) => {
-  const url =
-    "https://numbersapi.p.rapidapi.com/42/trivia?fragment=true&notfound=floor&json=true";
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "ccdd56a97emshe2a0dd7beb36da2p185c5cjsn657bc15662af",
-      "X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
-    },
-  };
-  const triviaFacts = fetch(url, options)
-    .then((response) => response.json())
-    .then((data) => {
-      if (data) {
-        console.log(data.text);
-        res.json(data);
-      } else {
-        res.status(400).send("Request has failed");
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-});
 
-app.listen(PORT, () => {
-  console.log(`Listening on local host ${PORT}`);
-});
