@@ -100,18 +100,6 @@ app.get("/year", (req, res) => {
     });
 });
 
-// fetch(url, options)
-//   .then((response) => response.json())
-//   .then((data) => {
-//     // console.log(data.text);
-//     // console.log(data.year);
-//     console.log(`${data.text} in year ${data.year}`);
-//     document.getElementById("quote").innerText = `${data.text} in year ${data.year}`;
-//   })
-//   .catch((error) => {
-//     console.error(error);
-//   });
-
 app.listen(PORT, () => {
   console.log(`Listening on local host ${PORT}`);
 });
