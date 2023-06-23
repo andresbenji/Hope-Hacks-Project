@@ -7,10 +7,10 @@
     <title>Kids website</title>
 
     <!-- Style css Link -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
 
     <!-- ==== Footer css ==== -->
-    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="/style/footer.css">
 
     <!-- boxicons link -->
     <link rel="stylesheet"
@@ -32,10 +32,14 @@
     <header>
         <a href="#" class="logo">Trivia Titans</a>
         <ul class="navlist">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/year.html">Date Fact</a></li>
-            <li><a href="/about.html">Contact</a></li>
-            <li><a href="/team.html">Team</a></li>
+            <li><a href="/public/HTML/index.html">Home</a></li>
+            <li><a href="/public/HTML/randomfact.html">Random Facts</a></li>
+            <li><a href="/year.html">Trivia Fact</a></li>
+            <li><a href="/public/HTML/year.html">Date Fact</a></li>
+            <li><a href="/public/HTML/mathFact.html">Math Fact</a></li>
+            <li><a href="/public/HTML/about.html">About</a></li>
+            <li><a href="/public/HTML/contact.html">Contact</a></li>
+            <li><a href="/public/HTML/team.html">Team</a></li>
         </ul>
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
@@ -44,7 +48,16 @@
         <h1>Random Year fact...</h1>
         <p id="quote"></p>
     </div>
-    <a href="/year.html"><button id="btn">New Fact</button></a>
+    <!-- <a href="/year.html"> -->
+        <button onclick="testApiCall()" id="btn">New Fact</button>
+    <!-- </a> -->
+    <script> async function testApiCall(){
+        const response = await fetch("http://localhost:5555/year")
+        const JSONdata = await response.json()
+        console.log(JSONdata);
+        const displayElement = document.getElementById("quote");
+      displayElement.innerText = `${JSONdata.text} in ${JSONdata.year}`;
+    }</script>
 
     <!-- ====FOOTER==== -->
 <section class="footer">
