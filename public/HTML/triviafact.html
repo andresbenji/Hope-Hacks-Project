@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="triviaRoutes.js"></script>
+    <link rel="stylesheet" href="" />
     <title>Trivia Fact</title>
   </head>
   <body>
@@ -15,7 +16,7 @@
       <article class="tfact-container">
         <div class="display-fact"><p id="number"></p></div>
         <label for="numberInput">Enter A Number</label>
-        <input type="number" id="numberInput" >
+        <input type="number" id="numberInput" />
         <button onclick="testApiCall()">Get A Fact!</button>
       </article>
     </section>
@@ -70,8 +71,10 @@
 
     <script>
       async function testApiCall() {
-        const number = document.getElementById('numberInput').value;
-        const response = await fetch("http://localhost:5555/triviafact/" + number);
+        const number = document.getElementById("numberInput").value;
+        const response = await fetch(
+          "http://localhost:5555/triviafact/" + number
+        );
         const JSONdata = await response.json();
         console.log(JSONdata);
         const displayElement = document.getElementById("number");
