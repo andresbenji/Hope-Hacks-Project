@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/randomFact.css">
     <link rel="stylesheet" href="/style/global.css">
-    <script src="server.js"></script>
+    <!-- <script src="server.js"></script> -->
+    <script src="/routes/script.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -39,13 +40,7 @@
         <button onclick="testApiCall()">Get A Fact!</button>
     </article>
    </section>
-   <script> async function testApiCall(){
-    const response = await fetch("http://localhost:5555/randomfacts")
-    const JSONdata = await response.json()
-    console.log(JSONdata);
-    const displayElement = document.getElementById("display");
-  displayElement.innerText = `${JSONdata.text} is ${JSONdata.number}`;
-}</script>
+  
 
 
    <!--====================== Flipper cards ===============-->
