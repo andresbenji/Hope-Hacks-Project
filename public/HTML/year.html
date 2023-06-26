@@ -62,17 +62,15 @@
       <p id="quote"></p>
     </div>
     <!-- <a href="/year.html"> -->
+
     <button onclick="testApiCall()" id="btn">New Fact</button>
     <!-- </a> -->
-    <script>
-      async function testApiCall() {
-        const response = await fetch("http://localhost:5555/year");
-        const JSONdata = await response.json();
-        console.log(JSONdata);
-        const displayElement = document.getElementById("quote");
-        displayElement.innerText = `${JSONdata.text} in ${JSONdata.year}`;
-      }
-    </script>
+  
+=======
+        <button onclick="getYearFact()" id="btn">New Fact</button>
+    <!-- </a> -->
+   
+
 
     <!-- ====FOOTER==== -->
     <section class="footer">
@@ -105,7 +103,9 @@
     </section>
     <!-- ===Footer==== -->
     <!-- Js link -->
-    <script src="script.js"></script>
-    <script src="app.js"></script>
   </body>
+=======
+
+</body>
+
 </html>

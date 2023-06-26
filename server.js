@@ -4,6 +4,7 @@ const PORT = 5555;
 const fetch = require("node-fetch");
 
 const app = express();
+let publicPath = path.join(__dirname, "public");
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -123,6 +124,28 @@ app.get("/triviafact/:number", (req, res) => {
     .catch((error) => {
       console.error(error);
     });
+});
+// endpoints
+app.get("/", (req, res) => {
+  res.sendFile(`${publicPath}/index.html`);
+});
+app.get("/randomfact", (req, res) => {
+  res.sendFile(`${publicPath}/randomfact.html`);
+});
+app.get("/mathFact", (req, res) => {
+  res.sendFile(`${publicPath}/mathFact.html`);
+});
+app.get("/yearfact", (req, res) => {
+  res.sendFile(`${publicPath}/year.html`);
+});
+app.get("/triviafact", (req, res) => {
+  res.sendFile(`${publicPath}/triviafact.html`);
+});
+app.get("/team", (req, res) => {
+  res.sendFile(`${publicPath}/team.html`);
+});
+app.get("/contact", (req, res) => {
+  res.sendFile(`${publicPath}/.html`);
 });
 
 app.listen(PORT, () => {

@@ -103,11 +103,11 @@ section {
 }
 
 /* .hero-text h4{
-  font-size: 18px;
-  font-weight: 600;
-  color: #FFFFFF;
-  margin-bottom: 10px;
-} */
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+  } */
 
 .hero-text p {
   color: #ffffff;
@@ -394,11 +394,11 @@ btn:active {
     height: auto;
   }
   /* .footer .footernav ul{
-      width: 100%;
-      text-align: center;
-      margin: 10px;
-
-  }  */
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+  
+    }  */
 }
 
 @media (max-width: 550px) {
