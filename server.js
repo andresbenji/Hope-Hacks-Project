@@ -1,18 +1,10 @@
-// const express = require("express");
-// const app = express();
-// const port = 6969;
-// const fs = require("fs");
-
-// app.listen(port, () => {
-//   console.log(`Listening on port: ${port}`);
-// });
-
 const express = require("express");
 const path = require("path"); //
 const PORT = 5555;
 const fetch = require("node-fetch");
 
 const app = express();
+let publicPath = path.join(__dirname, "public");
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -27,7 +19,7 @@ app.use((req, res, next) => {
 // app.use(express.static("public"));
 // path ways to connect the front end to the back end
 
-// ======================================
+// ====================================== Random Facts API
 
 app.get("/randomfacts", (req, res) => {
   const url =
@@ -55,35 +47,107 @@ app.get("/randomfacts", (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-  console.log(`Listening on local host ${PORT}`);
-});
+// ====================================== Random Math Facts API
 
-app.get("/mathFact", (req,res) => {
-  const mathURL= 
-   "https://numbersapi.p.rapidapi.com/1729/math?fragment=true&json=true";
-  const factOptions = {
-    method: 'GET',
+app.get("/mathFact/:number", (req, res) => {
+  const number = req.params.number;
+  const url = `https://numbersapi.p.rapidapi.com/${number}/math?fragment=true&json=true`;
+  const options = {
+    method: "GET",
     headers: {
-      'X-RapidAPI-Key': 'fbeb36f02dmshc031c9db38cab60p1d5940jsn432ffc6c97c4',
-      'X-RapidAPI-Host': 'numbersapi.p.rapidapi.com',
+      "X-RapidAPI-Key": "fbeb36f02dmshc031c9db38cab60p1d5940jsn432ffc6c97c4",
+      "X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
     },
   };
-  const randomMathFact= fetch(url, options)
-  .then((response) => response.json())
-  .then((data) => {
-    if (data) {
-      console.log(data.text);
-      console.log(data.number);
-      res.json(data);
-    } else {
-      res.status(400).send("Bad Request");
-    }
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+  const randomMathFact = fetch(url, options)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        res.json(data);
+      } else {
+        res.status(400).send("Bad Request");
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 });
-app.listen(4000, () => {
-  console.log(`Listening on local host 4000`);
+
+// ========================== Random Date Fact
+
+app.get("/year", (req, res) => {
+  const url =
+    "https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true";
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "222f5b18eemshb0f33bab03a19ccp14cf1ajsnb64c43c65f90",
+      "X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
+    },
+  };
+  const randomyear = fetch(url, options)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        console.log(data.text);
+        console.log(data.year);
+        res.json(data);
+      } else {
+        res.status(400).send("Bad Request");
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+});
+
+app.get("/triviafact/:number", (req, res) => {
+  const number = req.params.number;
+  const url = `https://numbersapi.p.rapidapi.com/${number}/trivia?fragment=true&notfound=floor&json=true`;
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "149c53b18cmsh86a3344921d867bp1c8b53jsn52fb896d19de",
+      "X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
+    },
+  };
+
+  const triviaFact = fetch(url, options)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        res.json(data);
+      } else {
+        res.status(400).send("Bad Request");
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+});
+// endpoints
+app.get("/", (req, res) => {
+  res.sendFile(`${publicPath}/index.html`);
+});
+app.get("/randomfact", (req, res) => {
+  res.sendFile(`${publicPath}/randomfact.html`);
+});
+app.get("/mathFact", (req, res) => {
+  res.sendFile(`${publicPath}/mathFact.html`);
+});
+app.get("/yearfact", (req, res) => {
+  res.sendFile(`${publicPath}/year.html`);
+});
+app.get("/triviafact", (req, res) => {
+  res.sendFile(`${publicPath}/triviafact.html`);
+});
+app.get("/team", (req, res) => {
+  res.sendFile(`${publicPath}/team.html`);
+});
+app.get("/contact", (req, res) => {
+  res.sendFile(`${publicPath}/.html`);
+});
+
+app.listen(PORT, () => {
+  console.log(`Listening on local host ${PORT}`);
 });
