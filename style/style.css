@@ -89,13 +89,6 @@ section{
     margin: 0 0 45px;
 }
 
-/* .hero-text h4{
-    font-size: 18px;
-    font-weight: 600;
-    color: #FFFFFF;
-    margin-bottom: 10px;
-} */
-
 .hero-text p{
     color: #FFFFFF;
     font-size: 15px;
@@ -246,6 +239,7 @@ body.year{
     font-family: 'Poppins', sans-serif;
 }
 
+/* ==== Button control ==== */
 #btn{
     border: none;
     display: inline-block;
@@ -262,7 +256,6 @@ body.year{
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     margin: 30px 0 10px 0;
-
 }
 
 #btn:hover{
@@ -278,162 +271,6 @@ btn:active{
 }
 /* ==== End of year page ==== */
 
-/* ================Footer=============== */
- /* .footer{
-    width: 100%;
-    padding: 2rem 2rem 2rem;
-    background-color:  #E83F6F;
-    margin-top: 5rem;
-    bottom: 0;
-     position: absolute; 
-} 
-.footer .socialicons{
-    display: flex;
-    justify-content: center;
-}
-
-.footer .socialicons a {
-    text-decoration: none;
-    padding: 1rem;
-    background-color: #FFFFFF;
-    margin: 1rem;
-    border-radius: 50%;
-  }
-  
-  .footer .socialicons a i {
-    font-size: 2rem;
-    color: black;
-    opacity: 0.9;
-  }
-  
-  .footer .socialicons a:hover i {
-    color: #E83F6F;
-    transition: 0.5s;
-  }
-  
-  .footer .footernav {
-    margin: 2rem 0;
-  }
-  
-  .footer .footernav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-  }
-  
-  .footer .footernav ul li a {
-    color: #FFFFFF;
-    margin: 2rem;
-    text-decoration: none;
-    font-size: 1.3rem;
-    opacity: 0.7;
-    transition: 0.5s;
-    text-transform: uppercase;
-  }
-  
-  .footer .footernav ul li a:hover {
-    opacity: 3;
-    color: #E83F6F;
-  }
-  
-  .footer .footerbottom {
-    background-color: black;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .footer .footerbottom p {
-    color: white;
-  }
-  
-  .footer .footerbottom .designer {
-    opacity: 0.8;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-weight: 300;
-    margin: 0px 2px;
-  } */
-/* =========== Footer ends =========== */
-/* .footer {
-    background: black;
-    padding: 70px 0;
-  }
-  
-  .footer-container {
-    max-width: 1170px;
-    margin: auto;
-  }
-  
-  .row {
-    display: flex;
-  }
-  
-  .footer-column {
-    width: 25%;
-    padding: 0 15px;
-  }
-  
-  .footer-column h4 {
-    font-size: 1rem;
-    color: white;
-    margin-bottom: 25px;
-    font-weight: 500;
-  }
-  
-  .footer-column ul {
-    list-style: none;
-  }
-  
-  .footer-column ul li a,
-  .footer-column ul li {
-    font-size: 16px;
-    text-decoration: none;
-    color: gray;
-    display: block;
-    transition: all 0.3s ease;
-    margin-bottom: 1rem;
-  }
-  
-  .footer-column .social-links a {
-    display: inline-block;
-    height: 1rem;
-    width: 2rem;
-    color: white;
-  }
-  
-  .footer-column ul li a:hover {
-    color: green;
-    padding-left: 6px;
-  }
-  
-  .footer-column input {
-    border: none;
-    width: 250px;
-    height: 45px;
-    display: block;
-    padding-left: 20px;
-    margin: 14px 0;
-  } */
-  
-  /* .btn{
-    background-color: white;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    border-radius: 1rem;
-  }
-  
-  .btn:hover {
-    box-shadow: 0 12px 16px 0 black, 0 17px 50px 0 gray;
-  }  */
 
   @media (max-width: 1535px){
 
@@ -465,21 +302,6 @@ btn:active{
     }
   }
 
-/* @media(max-width: 1535px){
-    .hero-img img{
-        width: 100%;
-        height: auto;
-    }
-    .hero-text h1{
-        font-size: 75px;
-        margin: 0 0 30px;
-
-    }
-    .hero-text h5{
-        margin-bottom: 25px;
-    }
-
-} */
 
 @media(max-width: 1195px){
     section{

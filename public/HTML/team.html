@@ -7,7 +7,15 @@
     <title>Kids website</title>
 
     <!-- CSS Link -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="/style/style.css">
+
+    <!-- footer -->
+    <link rel="stylesheet" href="/style/global.css">
+
+    <!-- ====Team css ====  -->
+   <link rel="stylesheet" href="/style/team.css">
+
 
     <!-- boxicons link -->
     <link rel="stylesheet"
@@ -29,6 +37,75 @@
     <header>
         <a href="#" class="logo">Trivia Titans</a>
         <ul class="navlist">
+
+            <li><a href="/public/HTML/index.html">Home</a></li>
+            <li><a href="/public/HTML/year.html">Date Trivia</a></li>
+            <li><a href="/public/HTML/contact.html">Contact</a></li>
+            <li><a href="/public/HTML/team.html">Team</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+    <section class="team">
+        <h1> Team Members</h1>
+        <div class="row">
+            <div class="col">
+                <div class="profile">
+                    <img src ="/imgs/heroimg2.png">
+                    <h2>Andres</h2>
+                    <p>Team Lead</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="profile">
+                    <img src ="/imgs/heroimg3.png">
+                    <h2>Oscar</h2>
+                    <p>Back End</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="profile">
+                    <img src ="/imgs/heroimg6.png">
+                    <h2>Jachimike</h2>
+                    <p>Front End</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="profile">
+                    <img src ="/imgs/heroimg7.png">
+                    <h2>Anthony</h2>
+                    <p>Back End</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <!-- ====FOOTER==== -->
+<section class="footer">
+    <div class="socialicons">
+      <a href="http://www.xbox.com"><i class="ri-xbox-fill"></i></a>
+      <a href="http://www.playstation.com"><i class="ri-playstation-fill"></i></a>
+      <a href="http://www.youtube.com"><i class="ri-youtube-fill"></i></a>
+      <a href="http://www.instagram.com"><i class="ri-instagram-fill"></i></a>
+  </div>
+  <div class="footernav">
+      <ul>
+          <li><a href="/public/HTML/index.html">Home</a></li>
+          <li><a href="/public/HTML/year.html">Date Fact</a></li>
+          <li><a href="/public/HTML/contact.html">Contact</a></li>
+          <li><a href="/public/HTML/team.html">Team</a></li>
+      </ul>
+  </div>
+  <div class="footerbottom">
+      <p>copyright &copy;2023; designed by <span class="designer">Trivia Titans</span></p>
+  </div>
+</section>
+<!-- ===Footer==== -->
+
+    <!-- ==== Js link ==== -->
+    <script src="/routes/app.js"> </script>
+
             <li><a href="/public/HTML/index.html">Home</a></li>
             <li><a href="/public/HTML/randomfact.html">Random Facts</a></li>
             <li><a href="/public/HTML/triviafact.html">Trivia Fact</a></li>
@@ -42,8 +119,8 @@
     </header>
 
     <!-- Js link -->
-    <script src="script.js"></script>
-    <script src="app.js"> </script>
+    <script src="/routes/script.js"></script>
+    
 
 </body>
 </html>
