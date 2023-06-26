@@ -2,147 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./randomFact.css">
-    <link rel="stylesheet" href="/style/global.css">
-    <script src="server.js"></script>
-    <title>Document</title>
+    <title>Kids website</title>
+
+    <!-- Style css Link -->
+    <link rel="stylesheet" type="text/css" href="/style/mathfact.css">
+
+    <!-- ==== Footer css ==== -->
+    <link rel="stylesheet" href="/style/footer.css">
+
+    <!-- boxicons link -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- remixicons link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Permanent+Marker&family=Poppins:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
+<body class="year">
+    <header>
+        <a href="#" class="logo">Trivia Titans</a>
+        <ul class="navlist">
+            <li><a href="/public/HTML/index.html">Home</a></li>
+            <li><a href="/public/HTML/randomfact.html">Random Facts</a></li>
+            <li><a href="/year.html">Trivia Fact</a></li>
+            <li><a href="/public/HTML/year.html">Date Fact</a></li>
+            <li><a href="/public/HTML/mathFact.html">Math Fact</a></li>
+            <li><a href="/public/HTML/about.html">About</a></li>
+            <li><a href="/public/HTML/contact.html">Contact</a></li>
+            <li><a href="/public/HTML/team.html">Team</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <div class="container">
+        <h1>Random Fact Generator...</h1>
+        <p id="display"></p>
+    </div>
+    <!-- <a href="/year.html"> -->
+        <button onclick="testApiCall()" id="btn">New Fact</button>
+    <!-- </a> -->
+
+    <!-- Other pages  -->
+
+   
    
 
-   <!--====================== Hero Img ===============-->
+    <!-- ====FOOTER==== -->
+<section class="footer">
+      <div class="socialicons">
+        <a href="http://www.xbox.com"><i class="ri-xbox-fill"></i></a>
+        <a href="http://www.playstation.com"><i class="ri-playstation-fill"></i></a>
+        <a href="http://www.youtube.com"><i class="ri-youtube-fill"></i></a>
+        <a href="http://www.instagram.com"><i class="ri-instagram-fill"></i></a>
+    </div>
+    <div class="footernav">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/year.html">Date Fact</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/team.html">Team</a></li>
 
-   <main class="hero-img">
-    <section class="page-width">
-        <h1>Discover Random Facts</h1>
-        <div class="section-text">
-            Explore randomly generated facts for your next project or personal enjoyment
-        </div>
-    </section>
-   </main>
-   
-   <!--====================== Intro Section ===============-->
-   <section class="randomIntro">
-    <h1>Random Fact Generator</h1>
-    <br>
-    <br>
-    <p>Random Fact Galore:</p>
-    <p>Prepare to be amazed by our vast collection of random facts that cover a wide range of topics. From animals and nature to science and history, you'll find an abundance of interesting and surprising facts to satisfy your thirst for knowledge. Dive into our treasure trove of information and discover fascinating tidbits that will leave you in awe!</p>
+            <li><a href="">our team</a></li>
+        </ul>
+    </div>
+    <div class="footerbottom">
+        <p>copyright &copy;2023; designed by <span class="designer">Trivia Titans</span></p>
+    </div>
 </section>
-<!--====================== Random Fact ===============-->
-
-<section class="fact-section">
-       <img class="mascot-img" src="img/mascot.webp" alt="">
-    <article class="fact-container">
-        <div class="display-fact"><p id="display"></p></div>
-        <button onclick="testApiCall()">Get A Fact!</button>
-    </article>
-   </section>
-   <script> async function testApiCall(){
-    const response = await fetch("http://localhost:5555/randomfacts")
-    const JSONdata = await response.json()
-    console.log(JSONdata);
-    const displayElement = document.getElementById("display");
-  displayElement.innerText = `${JSONdata.text} is ${JSONdata.number}`;
-}</script>
-
-
-   <!--====================== Flipper cards ===============-->
-   <section class="">
-    
-   </section>
-
-
-   <!--====================== Other Resources ===============-->
-   <section class="other-resources">
-    <h2>Check Out These Other Generators</h2>
-    <ul class="other-generators">
-        <li>
-           <img class="date-img" src="img/date.webp" alt="calander-img">
-           <div class="bullet">
-            <div class="spacer"></div>
-            <div class="bulletInfo">
-                <span>Date Generator:</span>
-                Generates Date Facts
-                <button class="generator-links">Take Me There</button>
-            </div>
-            <div class="spacer"></div>
-           </div> 
-        </li>
-        <li>
-            <img src="img/mathsymbols.webp" alt="mathsymbols">
-            <div class="bullet">
-            <div class="spacer"></div>
-            <div class="bulletInfo">
-                <span>Date Generator:</span>
-                Generates Date Facts
-                <button class="generator-links">Take Me There</button>
-            </div>
-            <div class="spacer"></div>
-           </div> 
-        </li>
-        <li>
-            <img src="img/trivia.webp" alt="mathsymbols">
-            <div class="bullet">
-            <div class="spacer"></div>
-            <div class="bulletInfo">
-                <span>Date Generator:</span>
-                Generates Date Facts
-                <button class="generator-links">Take Me There</button>
-            </div>
-            <div class="spacer"></div>
-           </div> 
-        </li>
-    </ul>
-    <section class="mascot-container">
-        <h2>Check Out These Other Generators</h2>
-        <img class="mascot-img" src="img/mascot.webp" alt="mascot">
-
-    </section>
-   </section>
-
-   <!-- ==================== footer ======================= -->
-
-<footer class="footer">
-    <section class="footer-container">
-        <section class="row">
-            <section class="footer-column">
-                <h4>Trivia Titans</h4>
-                <ul>
-                    <li><a href="$">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </section>
-            <section class="footer-column">
-                <h4>More Pages</h4>
-                <ul>
-                    <li><a href="$">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </section>
-            <section class="footer-column">
-                <h4>Follow US</h4>
-                <article class="social-links">
-                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-
-                </article>
-            </section>
-            <section class="footer-column">
-                <h4>Join Our Newsletter</h4>
-                <article class="newsletter">
-                    <input type="text"-class="inputEmail" placeholder="Email?">
-                    <button class="btnn btn1"> Send </button>
-                </article>
-            </section>
-        </section>
-    </section>
-    <hr>
-</footer>
+<!-- ===Footer==== -->
+    <!-- Js link -->
+    <script src="/routes/script.js"></script>
+    <script src="/routes/app.js"> </script>
 </body>
 </html>
