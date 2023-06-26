@@ -7,10 +7,14 @@
     <title>Kids website</title>
 
     <!-- Style css Link -->
-    <link rel="stylesheet" type="text/css" href="/style/style.css" />
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+
+    <!-- ==== Footer css ==== -->
+    <link rel="stylesheet" href="/style/global.css">
 
     <!-- ==== Footer css ==== -->
     <link rel="stylesheet" href="/style/footer.css" />
+
 
     <!-- boxicons link -->
     <link
@@ -31,6 +35,19 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Permanent+Marker&family=Poppins:wght@100;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+
+</head>
+<body class="year">
+    <header>
+        <a href="#" class="logo">Trivia Titans</a>
+        <ul class="navlist">
+            <li><a href="/public/HTML/index.html">Home</a></li>
+            <li><a href="/public/HTML/year.html">Date Fact</a></li>
+            <li><a href="/public/HTML/contact.html">Contact</a></li>
+            <li><a href="/public/HTML/team.html">Team</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
 
     <!-- font awesome cdn -->
     <link
@@ -55,6 +72,7 @@
         <li><a href="/public/HTML/team.html">Team</a></li>
       </ul>
       <div class="bx bx-menu" id="menu-icon"></div>
+
     </header>
 
     <div class="container">
@@ -63,10 +81,10 @@
     </div>
     <!-- <a href="/year.html"> -->
 
-    <button onclick="testApiCall()" id="btn">New Fact</button>
+    
     <!-- </a> -->
   
-=======
+
         <button onclick="getYearFact()" id="btn">New Fact</button>
     <!-- </a> -->
    
@@ -84,14 +102,30 @@
       </div>
       <div class="footernav">
         <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/year.html">Date Fact</a></li>
-          <li><a href="/triviafact.html">Trivia Fact</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/team.html">Team</a></li>
 
-          <li><a href="">our team</a></li>
+            <li><a href="/public/HTML/index.html">Home</a></li>
+            <li><a href="/public/HTML/year.html">Date Fact</a></li>
+            <li><a href="/public/HTML/contact.html">Contact</a></li>
+            <li><a href="/public/HTML/team.html">Team</a></li>
+        </ul>
+    </div>
+    <div class="footerbottom">
+        <p>copyright &copy;2023; designed by <span class="designer">Trivia Titans</span></p>
+    </div>
+</section>
+<!-- ===Footer==== -->
+
+    <!-- Js link -->
+    <script src="/routes/app.js"> </script>
+
+          <li><a href="/public/HTML/index.html">Home</a></li>
+          <li><a href="/public/HTML/year.html">Date Fact</a></li>
+          <li><a href="/public/HTML/triviafact.html">Trivia Fact</a></li>
+          <li><a href="/public/HTML/about.html">About</a></li>
+          <li><a href="/public/HTML/contact.html">Contact</a></li>
+          <li><a href="/public/HTML/team.html">Team</a></li>
+
+          
         </ul>
       </div>
       <div class="footerbottom">
@@ -103,8 +137,7 @@
     </section>
     <!-- ===Footer==== -->
     <!-- Js link -->
-  </body>
-=======
+    <script src="/routes/script.js"></script>
 
 </body>
 
