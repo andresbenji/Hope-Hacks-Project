@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Kids website</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/global.css">
+
+    <!-- ====Contact link ==== -->
+    <link rel="stylesheet" href="/style/contact.css">
+
+    <!-- boxicons link -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- remixicons link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Permanent+Marker&family=Poppins:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <form class="contactForm" method="post" action="http://localhost:3000/submit">
+    <header>
+        <a href="#" class="logo">Trivia Titans</a>
+        <ul class="navlist">
+            <li><a href="/public/HTML/index.html">Home</a></li>
+            <li><a href="/public/HTML/randomfact.html">Random Facts</a></li>
+            <li><a href="/public/HTML/triviafact.html">Trivia Fact</a></li>
+            <li><a href="/public/HTML/year.html">Date Fact</a></li>
+            <li><a href="/public/HTML/mathFact.html">Math Fact</a></li>
+            <li><a href="/public/HTML/about.html">About</a></li>
+            <li><a href="/public/HTML/contact.html">Contact</a></li>
+            <li><a href="/public/HTML/team.html">Team</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <!-- ==== Contact form ==== -->
+    <!-- <form class="contactForm" method="post" action="http://localhost:3000/submit">
         <table>
             <tr>
                 <td> Name  :</td>
@@ -46,6 +82,88 @@
                 <td><input type="submit" value="Submit"> </td>
             </tr>
         </table>
+    </form> -->
+    <!-- ==== End of contact form -->
+
+<!-- ==== Contact form ==== -->
+    <form class="contactform" method="post" action="http://localhost:3000/submit">
+        <h2>Contact Us</h2>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span class="text">First name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span class="text">Last name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span class="text">Email</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span class="text">Mobile</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox textarea">
+                    <textarea required="required"></textarea>
+                    <span class="text">Type your message Here...</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <input type="submit" value="Send" class="btn">
+          </div>
     </form>
+     <!-- ==== End of contact form -->
+
+   <!-- ====FOOTER==== -->
+   <section class="footer">
+    <div class="socialicons">
+      <a href="http://www.xbox.com"><i class="ri-xbox-fill"></i></a>
+      <a href="http://www.playstation.com"><i class="ri-playstation-fill"></i></a>
+      <a href="http://www.youtube.com"><i class="ri-youtube-fill"></i></a>
+      <a href="http://www.instagram.com"><i class="ri-instagram-fill"></i></a>
+  </div>
+  <div class="footernav">
+      <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/year.html">Date Fact</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/team.html">Team</a></li>
+      </ul>
+  </div>
+  <div class="footerbottom">
+      <p>copyright &copy;2023; designed by <span class="designer">Trivia Titans</span></p>
+  </div>
+</section>
+<!-- ===Footer ends==== -->
+
+
+    <!-- ==== Js link ==== -->
+    <script src="app.js"> </script>
+
 </body>
 </html>

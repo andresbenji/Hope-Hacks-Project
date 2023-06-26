@@ -2,6 +2,7 @@
 async function testApiCall() {
   const response = await fetch("http://localhost:5555/randomfacts");
   const JSONdata = await response.json();
+  
   console.log(JSONdata);
   const displayElement = document.getElementById("display");
   displayElement.innerText = `${JSONdata.text} is ${JSONdata.number}`;
