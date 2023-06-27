@@ -16,7 +16,7 @@ This application has a few pages
 7. Team - team.html
 
 ## Installation
- In this web application we are using the Numbers Rapid API. To be able to work with this, make sure you install all of the necessary npm packages listed under *Technologies Used*. Lastly, use the command nodemon server.js.
+ In this web application we are using the Numbers Rapid API. To be able to work with this, make sure you install all of the necessary npm packages listed under *Technologies Used*. Next, use the command nodemon server.js. Lastly, use the AWS link located under *References*.
 
 ## Acknowledgements
 Meet the team!
