@@ -1,5 +1,5 @@
 /* ================Footer=============== */
-.footer{
+.footer {
   height: 10;
   width: 100%;
   padding: 2rem 2rem 2rem;
@@ -8,7 +8,7 @@
   bottom: 0;
   position: absolute;
 }
-.footer .socialicons{
+.footer .socialicons {
   display: flex;
   justify-content: center;
 }
@@ -16,7 +16,7 @@
 .footer .socialicons a {
   text-decoration: none;
   padding: 1rem;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin: 1rem;
   border-radius: 50%;
 }
@@ -28,7 +28,7 @@
 }
 
 .footer .socialicons a:hover i {
-  color: #E83F6F;
+  color: #e83f6f;
   transition: 0.5s;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .footer .footernav ul li a {
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 2rem;
   text-decoration: none;
   font-size: 1.3rem;
@@ -54,14 +54,13 @@
 
 .footer .footernav ul li a:hover {
   opacity: 3;
-  color: #E83F6F;
+  color: #e83f6f;
 }
 
 .footer .footerbottom {
-  background-color: #32936F;
+  background-color: #32936f;
   padding: 1rem;
   text-align: center;
-  
 }
 
 .footer .footerbottom p {
@@ -76,7 +75,6 @@
   margin: 0px 2px;
 }
 /* =========== Footer ends =========== */
-
 
 /* @media (max-width: 820px) {
   .footer-column {
