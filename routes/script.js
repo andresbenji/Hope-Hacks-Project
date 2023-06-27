@@ -2,10 +2,12 @@
 async function testApiCall() {
   const response = await fetch("http://localhost:5555/randomfacts");
   const JSONdata = await response.json();
-  
+
   console.log(JSONdata);
   const displayElement = document.getElementById("display");
-  displayElement.innerText = `${JSONdata.text} is ${JSONdata.number}`;
+  const capitalWord =
+    JSONdata.text.charAt(0).toUpperCase() + JSONdata.text.slice(1);
+  displayElement.innerText = `${capitalWord} is ${JSONdata.number}`;
 }
 
 // ====================== Math Fact on click
@@ -15,7 +17,10 @@ async function getMathFact() {
   const JSONdata = await response.json();
   console.log(JSONdata);
   const displayElement = document.getElementById("number");
-  displayElement.innerText = `${JSONdata.text} is ${JSONdata.number} `;
+  const capitalWord =
+    JSONdata.text.charAt(0).toUpperCase() + JSONdata.text.slice(1);
+
+  displayElement.innerText = `${capitalWord} is ${JSONdata.number}`;
 }
 
 // ================= Year Fact on click
@@ -24,7 +29,11 @@ async function getYearFact() {
   const JSONdata = await response.json();
   console.log(JSONdata);
   const displayElement = document.getElementById("quote");
-  displayElement.innerText = `${JSONdata.text} in ${JSONdata.year}`;
+
+  const capitalWord =
+    JSONdata.text.charAt(0).toUpperCase() + JSONdata.text.slice(1);
+
+  displayElement.innerText = `${capitalWord} in ${JSONdata.year}`;
 }
 
 // ================== Trivia Fact on click
@@ -35,5 +44,7 @@ async function getTriviaFact() {
   const JSONdata = await response.json();
   console.log(JSONdata);
   const displayElement = document.getElementById("number");
-  displayElement.innerText = `${JSONdata.text}`;
+  const capitalWord =
+    JSONdata.text.charAt(0).toUpperCase() + JSONdata.text.slice(1);
+  displayElement.innerText = `${capitalWord} is ${JSONdata.number}`;
 }
