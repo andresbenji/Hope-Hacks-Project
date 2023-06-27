@@ -21,7 +21,7 @@ app.post('/submit', (req, res)=>{
     con.connect(function(err) {
         if (err) throw err;
         console.log("Connected!");
-        let sql = `INSERT INTO formHopeHack.contact (name, gender, email, tel) VALUES ("${formData.fullname}", "${formData.gender}", "${formData.email}" , ${tel})`;    //
+        let sql = `INSERT INTO formHopeHack.contact (name, gender, email, tel, comment) VALUES ("${formData.fullname}", "${formData.gender}", "${formData.email}" , ${tel}, "${formData.comment}")`;    //
         console.log(`this is sql ${sql}`);
         con.query(sql, function (err, result) {
           if (err) throw err;
