@@ -6,11 +6,13 @@ const fetch = require("node-fetch");
 const app = express();
 let publicPath = path.join(__dirname, "public");
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  // res.setHeader("Access-Control-Allow-Origin", "*");
+  // The next line sets the "Access-Control-Allow-Methods" header, which specifies the HTTP methods that are allowed for the request. In this case, the value is set to "GET, POST, PUT, DELETE, OPTIONS", meaning that these methods are permitted.
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, PUT, DELETE, OPTIONS"
   );
+  // The third line sets the "Access-Control-Allow-Headers" header, which defines the allowed headers for the request. In this case, the "Content-Type" and "Authorization" headers are allowed.
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
@@ -31,9 +33,12 @@ app.get("/randomfacts", (req, res) => {
       "X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
     },
   };
+  // The fetch() function is used to make the actual API request. It takes the url and options as parameters and returns a Promise that resolves to the response.
   const randomFacts = fetch(url, options)
     .then((response) => response.json())
+    // The response is then handled using Promise chaining. The response.json() method is called to parse the response data as JSON.
     .then((data) => {
+      // The next .then() block is executed, which receives the parsed JSON data as data. Inside this block, it checks if the data variable is truthy. If it is truthy, it logs the trivia fact and the corresponding number to the console and sends the data as a JSON response to the client using res.json(data). If the data variable is falsy, it means something went wrong, so it sends a "Bad Request" response with a status code of 400.
       if (data) {
         console.log(data.text);
         console.log(data.number);
@@ -46,6 +51,7 @@ app.get("/randomfacts", (req, res) => {
       console.error(error);
     });
 });
+// This code demonstrates how to create a server-side endpoint that fetches a random fact from an external API and sends it as a response to the client.
 
 // ====================================== Random Math Facts API
 
@@ -126,27 +132,27 @@ app.get("/triviafact/:number", (req, res) => {
     });
 });
 // endpoints
-app.get("/", (req, res) => {
-  res.sendFile(`${publicPath}/index.html`);
-});
-app.get("/randomfact", (req, res) => {
-  res.sendFile(`${publicPath}/randomfact.html`);
-});
-app.get("/mathFact", (req, res) => {
-  res.sendFile(`${publicPath}/mathFact.html`);
-});
-app.get("/yearfact", (req, res) => {
-  res.sendFile(`${publicPath}/year.html`);
-});
-app.get("/triviafact", (req, res) => {
-  res.sendFile(`${publicPath}/triviafact.html`);
-});
-app.get("/team", (req, res) => {
-  res.sendFile(`${publicPath}/team.html`);
-});
-app.get("/contact", (req, res) => {
-  res.sendFile(`${publicPath}/.html`);
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(`${publicPath}/index.html`);
+// });
+// app.get("/randomfact", (req, res) => {
+//   res.sendFile(`${publicPath}/randomfact.html`);
+// });
+// app.get("/mathFact", (req, res) => {
+//   res.sendFile(`${publicPath}/mathFact.html`);
+// });
+// app.get("/yearfact", (req, res) => {
+//   res.sendFile(`${publicPath}/year.html`);
+// });
+// app.get("/triviafact", (req, res) => {
+//   res.sendFile(`${publicPath}/triviafact.html`);
+// });
+// app.get("/team", (req, res) => {
+//   res.sendFile(`${publicPath}/team.html`);
+// });
+// app.get("/contact", (req, res) => {
+//   res.sendFile(`${publicPath}/.html`);
+// });
 
 app.listen(PORT, () => {
   console.log(`Listening on local host ${PORT}`);
