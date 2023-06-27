@@ -6,7 +6,7 @@ const fetch = require("node-fetch");
 const app = express();
 let publicPath = path.join(__dirname, "public");
 app.use((req, res, next) => {
-  // res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   // The next line sets the "Access-Control-Allow-Methods" header, which specifies the HTTP methods that are allowed for the request. In this case, the value is set to "GET, POST, PUT, DELETE, OPTIONS", meaning that these methods are permitted.
   res.setHeader(
     "Access-Control-Allow-Methods",
