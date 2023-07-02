@@ -32,7 +32,6 @@ async function getYearFact() {
 
   const capitalWord =
     JSONdata.text.charAt(0).toUpperCase() + JSONdata.text.slice(1);
-
   displayElement.innerText = `${capitalWord} in ${JSONdata.year}`;
 }
 
